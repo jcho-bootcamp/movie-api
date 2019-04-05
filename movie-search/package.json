@@ -1,0 +1,24 @@
+{
+  "name": "movie-search",
+  "version": "1.0.0",
+  "description": "movie search app using an api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcho-bootcamp/movie-api.git"
+  },
+  "author": "June Hyok Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcho-bootcamp/movie-api/issues"
+  },
+  "homepage": "https://github.com/jcho-bootcamp/movie-api#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
