@@ -1,7 +1,12 @@
+<% include ./partials/header %>
+
 <h1>Results Page!</h1>
 
 <% searchData["Search"].forEach((movie) => { %>
 <li>
   <strong><%= movie["Title"] %></strong> - <%= movie["Year"] %>
+  <img src="<%= movie.Poster %>">
 </li>
-<% }) %>
+<% }); %>
+
+<% include ./partials/footer %>
