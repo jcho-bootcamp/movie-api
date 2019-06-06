@@ -1,22 +1,48 @@
 :root {
   --background-color: #221F1F;
-  --secondary-color: #0086FF;
+  --primary-color: #0086FF;
+  --secondary-color: #D7E1EC;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lobster', cursive;
 }
 
 /* ============================================== */
-/* Fonts */
+/* Navbar */
 /* ============================================== */
 
-h4 {
-  font-size: 1.5em;
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  padding: 5px;
+}
+
+.logo {
+  height: 60px;
+  padding-left: 5%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  padding-right: 5%;
+}
+
+.nav-list > li {
+  padding: 0 20px;
+  list-style: none;
+}
+
+a {
   color: #ffffff;
+  text-decoration: none;
 }
 
 /* ============================================== */
@@ -25,13 +51,23 @@ h4 {
 
 .title {
   margin: 0;
-  font-size: 5em;
-  color: var(--secondary-color);
+  font-size: 6em;
+  color: var(--primary-color);
+}
+
+.title-wrapper {
+  padding: 5px 20px;
+  background-color: var(--secondary-color);
+}
+
+.search-form > h4 {
+  font-size: 2em;
+  color: #ffffff;
 }
 
 .search-form {
-  width: 60%;
-  height: 100vh;
+  width: 50%;
+  height: calc(100vh - 64px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -48,7 +84,7 @@ h4 {
 input {
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .search-text {
@@ -58,6 +94,7 @@ input {
 .submit-button {
   margin: 2px 0 0 0;
   padding: 10px 20px;
+  background-color: var(--secondary-color);
 }
 
 /* ============================================== */
@@ -76,8 +113,18 @@ input {
   flex-direction: column;
   width: 30%;
   margin: 1.66%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 2px solid var(--secondary-color);
+  padding: 0;
+  background-color: #29539b;
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+}
+
+.card-content > h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
   color: #ffffff;
+}
+
+.card-content > p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
 }

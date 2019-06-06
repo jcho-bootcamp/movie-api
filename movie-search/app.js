@@ -18,6 +18,7 @@ app.get("/results", (req, res) => {
   request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
       let searchData = JSON.parse(body);
+      console.log(searchData);
       res.render("results", { searchData: searchData });
     } else {
       console.log(error);
