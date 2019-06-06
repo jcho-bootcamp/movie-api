@@ -1,10 +1,13 @@
 <% include ./partials/header %>
 
-<h1>Search for a Movie!</h1>
 
-<form action="results" method="GET">
-  <input type="text" placeholder="Search Term" name="search">
-  <input type="submit">
-</form>
+<div class="search-form">
+  <h1 class="title">Movie Central</h1>
+  <h4>Search and save all your favorites</h4>
+  <form class="search-bar" action="results" method="GET">
+    <input class="search-text" type="text" placeholder="Search your favorites here..." name="search">
+    <input class="submit-button" type="submit">
+  </form>
+</div>
 
 <% include ./partials/footer %>

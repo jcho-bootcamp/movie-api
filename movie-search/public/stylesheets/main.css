@@ -1,3 +1,83 @@
+:root {
+  --background-color: #221F1F;
+  --secondary-color: #0086FF;
+}
+
 html, body {
-  background-color: steelblue;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: 'Playfair Display', serif;
+}
+
+/* ============================================== */
+/* Fonts */
+/* ============================================== */
+
+h4 {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+/* ============================================== */
+/* Search */
+/* ============================================== */
+
+.title {
+  margin: 0;
+  font-size: 5em;
+  color: var(--secondary-color);
+}
+
+.search-form {
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-text {
+  padding: 10px 20px;
+}
+
+.submit-button {
+  margin: 2px 0 0 0;
+  padding: 10px 20px;
+}
+
+/* ============================================== */
+/* Results */
+/* ============================================== */
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 1.66%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--secondary-color);
+  color: #ffffff;
 }

@@ -1,16 +1,17 @@
 const express = require("express");
 const app = express();
 const request = require("request");
+const favicon = require("serve-favicon");
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
+app.use(favicon(__dirname + "/favicon.ico"));
 
 app.get("/", (req, res) => {
   res.render("search");
 });
 
 app.get("/results", (req, res) => {
-  // res.send("Hello! It works!");
   let query = req.query.search;
   let url = "http://www.omdbapi.com/?s=" + query + "&apikey=thewdb"
 
