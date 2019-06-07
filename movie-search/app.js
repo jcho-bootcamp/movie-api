@@ -5,7 +5,7 @@ const favicon = require("serve-favicon");
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
-app.use(favicon(__dirname + "/favicon.ico"));
+app.use(favicon(__dirname + "/logo.ico"));
 
 app.get("/", (req, res) => {
   res.render("search");
