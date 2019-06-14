@@ -1,16 +1,37 @@
-const express = require("express");
-const app = express();
-const request = require("request");
-const favicon = require("serve-favicon");
+const express = require("express"),
+  app = express(),
+  request = require("request"),
+  favicon = require("serve-favicon"),
+  bodyParser = require("body-parser"),
+  mongoose = require("mongoose"),
+  passport = require("passport"),
+  LocalStrategy = require("passport-local"),
+  User = require("./models/user");
+
+// PASSPORT CONFIG
+app.use(require("express-session")({
+  secret: "keyboard cat",
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
-app.use(favicon(__dirname + "/logo.ico"));
+app.use(favicon(__dirname + "/public/favicon.ico"));
 
+mongoose.connect("mongodb://localhost/movie-central", { useNewUrlParser: true });
+
+// INDEX ROUTE
 app.get("/", (req, res) => {
   res.render("search");
 });
 
+// SHOW ROUTE
 app.get("/results", (req, res) => {
   let query = req.query.search;
   let url = "http://www.omdbapi.com/?s=" + query + "&apikey=thewdb"

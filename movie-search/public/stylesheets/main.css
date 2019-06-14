@@ -49,9 +49,21 @@ html, body {
   list-style: none;
 }
 
-a {
+h2 > a {
   color: #ffffff;
   text-decoration: none;
+}
+
+.nav-list > li:nth-child(2) > h2 > a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.nav-list > li:nth-child(2) > h2 > a:hover {
+  color: #ffffff;
 }
 
 /* ============================================== */
