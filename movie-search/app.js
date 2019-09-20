@@ -39,13 +39,13 @@ app.get("/results", (req, res) => {
   request(url, (error, response, body) => {
     if (!error && response.statusCode === 200) {
       let searchData = JSON.parse(body);
-      console.log(searchData);
+
       res.render("results", { searchData: searchData });
+
     } else {
       console.log(error);
     }
   });
 });
-
 
 app.listen(3000, () => console.log("Server is Listening on Port : 3000!"));
